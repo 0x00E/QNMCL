@@ -1,0 +1,99 @@
+<Window x:Class="QNMCL.ConfigWindow" Title="设置" Height="300" Width="300" WindowStartupLocation="CenterOwner" ResizeMode="NoResize" Closing="Window_Closing" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <Grid>
+    <TabControl>
+      <TabItem Header="验证">
+        <Grid>
+          <Grid.RowDefinitions>
+            <RowDefinition Height="30" />
+            <RowDefinition Height="30" />
+            <RowDefinition Height="30" />
+            <RowDefinition />
+          </Grid.RowDefinitions>
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*" />
+            <ColumnDefinition Width="5*" />
+          </Grid.ColumnDefinitions>
+          <Label HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="0" Grid.Column="0" Content="验证方式" />
+          <Label HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1" Grid.Column="0" Content="用户名/Email" />
+          <Label HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="2" Grid.Column="0" Content="密码" />
+          <ComboBox Name="Authenticator" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="0" Grid.Column="1" Width="160" SelectionChanged="Authenticator_SelectionChanged">
+            <ComboBoxItem Tag="Yggdrasil" Content="正版模式" />
+            <ComboBoxItem Tag="Offline" Content="离线模式" />
+          </ComboBox>
+          <TextBox Name="UserName" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1" Grid.Column="1" Width="160" Height="20" />
+          <PasswordBox Name="Password" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="2" Grid.Column="1" Width="160" Height="20" />
+        </Grid>
+      </TabItem>
+      <TabItem Header="启动设置">
+        <Grid>
+          <Grid.RowDefinitions>
+            <RowDefinition Height="30" />
+            <RowDefinition Height="30" />
+            <RowDefinition Height="30" />
+            <RowDefinition />
+          </Grid.RowDefinitions>
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="41*" />
+            <ColumnDefinition Width="23*" />
+            <ColumnDefinition Width="80*" />
+          </Grid.ColumnDefinitions>
+          <Label HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="0" Grid.Column="0" Content="最大内存" Margin="12.142,2.38,12.143,2.38" />
+          <Label Grid.Column="0" Content="附加参数" VerticalAlignment="Top" Grid.Row="3" Margin="10,2.62,14.286,0" />
+          <Label HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="2" Grid.Column="0" Content="启动模式" Margin="12.142,2.38,12.143,2.38" />
+          <TextBox Name="MaxMem" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="0" Grid.Column="2" Width="160" Height="20" Margin="-22.857,5,22.857,5" />
+          <TextBox Name="AdvArg" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Row="3" Grid.Column="2" Width="160" Height="20" Margin="-22.857,6.62,22.857,0" />
+          <ComboBox Name="LaunchMode" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="2" Grid.Column="2" Width="160" Margin="-22.857,4.38,22.857,4.38">
+            <ComboBoxItem Tag="Default" Content="普通启动" />
+            <ComboBoxItem Tag="BMCL" Content="核心隔离" />
+            <ComboBoxItem Tag="MCLauncher" Content="版本隔离" />
+          </ComboBox>
+          <Label Name="memory" HorizontalAlignment="Left" Grid.Row="1" Content="点击自动设置内存(最大内存为0既不限制内存)" Margin="12.143,2.14,0,2.62" Width="258.334" Grid.ColumnSpan="3" MouseDown="memory_MouseDown" />
+        </Grid>
+      </TabItem>
+      <TabItem Header="服务器">
+        <Grid>
+          <Label HorizontalAlignment="Left" VerticalAlignment="Top" Content="自动进入服务器IP:" Margin="12.11,10,0,0" Height="38.333" />
+          <TextBox Name="server" Height="23" TextWrapping="Wrap" Margin="124.87,10,42.463,0" RenderTransformOrigin="0.939,1.497" VerticalAlignment="Top" />
+          <Label Name="cap" HorizontalAlignment="Left" VerticalAlignment="Top" Content="注:端口请用英文冒号分隔开，&#xD;&#xA;不输入端口即25565默认端口" Margin="36.665,38,0,0" Height="52.48" Width="190.223" />
+        </Grid>
+      </TabItem>
+      <TabItem Header="背景图片">
+        <Grid>
+          <Grid.RowDefinitions>
+            <RowDefinition Height="17*" />
+            <RowDefinition Height="105*" />
+          </Grid.RowDefinitions>
+          <Label HorizontalAlignment="Left" Content="路径:" Margin="12.11,10,0,-14.573" />
+          <TextBox Name="bgPath" Height="23" TextWrapping="Wrap" Margin="70.87,10,96.463,0.76" RenderTransformOrigin="0.939,1.497" />
+          <Label Name="cap1" HorizontalAlignment="Left" VerticalAlignment="Top" Content="支持URL和本地目录&#xD;&#xA;直接填写图片为相对路径" Margin="36.165,10,0,0" Height="52.48" Width="190.223" Grid.Row="1" />
+          <Button Name="bg" Content="提交" HorizontalAlignment="Right" Margin="0,5.103,26.5,-5" Width="53" Click="bg_Click" />
+        </Grid>
+      </TabItem>
+      <TabItem Header="版本更新">
+        <Grid>
+          <Grid.RowDefinitions>
+            <RowDefinition Height="17*" />
+            <RowDefinition Height="105*" />
+          </Grid.RowDefinitions>
+          <Label Name="cap2" HorizontalAlignment="Left" Content="打开下载页面" Margin="45.165,-23.967,0,0" Width="190.223" Height="52.48" Grid.Row="1" VerticalAlignment="Top" />
+          <Button Name="up" Content="版本更新" Margin="140,5.688,77,-5.584" Click="up_Click" />
+        </Grid>
+      </TabItem>
+      <TabItem Header="背景音乐">
+        <Grid>
+          <Grid.RowDefinitions>
+            <RowDefinition Height="17*" />
+            <RowDefinition Height="105*" />
+          </Grid.RowDefinitions>
+          <Label HorizontalAlignment="Left" Content="路径:" Margin="12.11,10,0,-14.573" />
+          <TextBox Name="musictext" Height="23" TextWrapping="Wrap" Margin="70.87,10,96.463,0.76" RenderTransformOrigin="0.939,1.497" />
+          <Label Name="cap3" HorizontalAlignment="Left" VerticalAlignment="Top" Content="支持URL和本地目录&#xA;直接填写音乐为相对路径&#xD;&#xA;音乐必须是.wav格式" Margin="35.665,19.573,0,0" Height="72.98" Width="201.723" Grid.Row="1" />
+          <Button Name="music" Content="提交" HorizontalAlignment="Right" Margin="0,5.103,26.5,-5" Width="53" Click="music_Click" />
+        </Grid>
+      </TabItem>
+    </TabControl>
+    <Label Name="canMeoLabel" Content="可用物理内存:获取失败" Margin="43.309,0,113.107,-26.49" Height="86.959" VerticalAlignment="Bottom" />
+    <Label Name="maxMeoLabel" Content="系统物理内存: 获取失败" Margin="43.309,0,113.107,10" Height="86.959" VerticalAlignment="Bottom" />
+    <Button Name="resetlabel" Content="刷新" HorizontalAlignment="Right" Height="28.667" Margin="0,0,40.333,31.802" VerticalAlignment="Bottom" Width="57.334" Click="resetlabel_Click" />
+  </Grid>
+</Window>

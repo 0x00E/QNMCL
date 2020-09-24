@@ -1,0 +1,14 @@
+C:\Users\Administrator\Desktop\QNMCL\obj\x86\Debug\QNMCL.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\QNMCL\bin\Debug\QNMCL.exe
+C:\Users\Administrator\Desktop\QNMCL\bin\Debug\QNMCL.pdb
+C:\Users\Administrator\Desktop\QNMCL\obj\x86\Debug\QNMCL.exe
+C:\Users\Administrator\Desktop\QNMCL\obj\x86\Debug\QNMCL.pdb
+C:\Users\Administrator\Desktop\QNMCL\obj\x86\Debug\QNMCL\MainWindow.baml
+C:\Users\Administrator\Desktop\QNMCL\obj\x86\Debug\QNMCL\MainWindow.g.cs
+C:\Users\Administrator\Desktop\QNMCL\obj\x86\Debug\QNMCL_MarkupCompile.cache
+C:\Users\Administrator\Desktop\QNMCL\obj\x86\Debug\QNMCL.g.resources
+C:\Users\Administrator\Desktop\QNMCL\obj\x86\Debug\QNMCL\ConfigWindow.baml
+C:\Users\Administrator\Desktop\QNMCL\obj\x86\Debug\QNMCL\LoadingWindow.baml
+C:\Users\Administrator\Desktop\QNMCL\obj\x86\Debug\QNMCL\ConfigWindow.g.cs
+C:\Users\Administrator\Desktop\QNMCL\obj\x86\Debug\QNMCL\LoadingWindow.g.cs
+C:\Users\Administrator\Desktop\QNMCL\obj\x86\Debug\QNMCL_Content.g.cs

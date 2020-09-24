@@ -1,0 +1,18 @@
+﻿<Window x:Class="QNMCL.MainWindow" Title="QNMCL" Width="630" Height="400" ResizeMode="NoResize" WindowStyle="None" MouseLeftButtonDown="Window_MouseDown" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <Grid>
+    <Canvas>
+      <Image Name="bg" Height="400" Source="BG.png" Width="640" Stretch="Fill" />
+      <Button Name="BtnLaunch" Canvas.Left="508" Canvas.Top="340" Width="100" Height="40" Background="#FFE8FF00" IsTabStop="False" FontSize="20" FontWeight="Bold" Content="开始" Click="Btn_launch_Click" />
+      <Button Name="BtnConfig" Canvas.Left="508" Canvas.Top="148" Width="100" Height="40" Background="#FF00FFC5" IsTabStop="False" FontSize="20" FontWeight="Bold" Content="设置" Click="Btn_config_Click" />
+      <ComboBox Name="ListVersions" Canvas.Left="383" Canvas.Top="345" Width="120" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16" Background="#7FDDDDDD" DisplayMemberPath="Id" />
+      <Button Width="82" Height="40" HorizontalAlignment="Left" VerticalAlignment="Top" Content="关闭" FontSize="30" Background="#FF000000" BorderBrush="#00000000" Foreground="#FFFFE800" FontFamily="Bradley Hand ITC" ToolTip="关闭" FontWeight="Bold" Canvas.Left="526" Canvas.Top="10" Click="ButtonBase_OnClick" />
+      <Label Name="label" Content="打开目录" Height="29" Canvas.Left="318.333" Canvas.Top="345" Width="59.667" FontWeight="Bold" Background="{x:Null}" MouseDown="label_MouseDown" />
+      <Label Name="link" Content="QNMCL By qianniancc" Height="25" Canvas.Left="492" Canvas.Top="375" Width="404" MouseDown="link_MouseDown" MouseEnter="link_MouseEnter" MouseLeave="link_MouseLeave" />
+      <Label Name="delgame" Content="删除选中游戏" Height="29" Canvas.Left="397" Canvas.Top="311" Width="106" RenderTransformOrigin="0.563,0.851" FontWeight="Bold" Background="{x:Null}" MouseDown="delgame_MouseDown" />
+      <Button Name="from" Canvas.Left="508" Canvas.Top="211.62" Width="100" Height="40" Background="#FFB9FF00" IsTabStop="False" FontSize="20" FontWeight="Bold" Content="关于" Click="from_Click" />
+      <TextBox Name="textBox" Height="32" Canvas.Left="304" TextWrapping="Wrap" Canvas.Top="279" Width="199" />
+      <Button Name="change" Content="更改" Height="40" Canvas.Left="508" Canvas.Top="276" Width="100" FontSize="20" FontWeight="Bold" Background="#FF9700FF" Click="change_Click" />
+      <Button Name="javalink" Canvas.Left="508" Canvas.Top="87.333" Width="100" Height="40" Background="#FF17FF00" IsTabStop="False" FontSize="20" FontWeight="Bold" Content="JAVA" Click="javalink_Click" />
+    </Canvas>
+  </Grid>
+</Window>
